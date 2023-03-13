@@ -1,2 +1,0 @@
-#!/bin/bash
-ls -ltc -r | head -10
