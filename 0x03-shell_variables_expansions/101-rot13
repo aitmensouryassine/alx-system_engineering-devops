@@ -1,2 +1,2 @@
 #!/bin/bash
-tr 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM'
+tr `echo {a..m} | tr -d ' '` `echo {n..z} | tr -d ' '`
