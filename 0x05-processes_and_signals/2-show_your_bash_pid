@@ -2,4 +2,3 @@
 # displays lines containing the bash word
 
 ps axu --forest | sed -n '/bash/ p'
-    # awk '{/bash/{print $0}'
