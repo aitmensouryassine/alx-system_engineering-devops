@@ -14,14 +14,14 @@ sigint_handler(){
 }
 sigterm_sigquit_handler() {
     rm /var/run/myscript.pid
-    kill -15 $$
+    exit
 }
 
 trap sigterm_handler SIGTERM
 trap sigint_handler SIGINT
 trap sigterm_sigquit SIGQUIT SIGTERM
 
-echo $$ > /var/run/myscript.pid
+echo "$$" > /var/run/myscript.pid
 
 while true; do
       echo "To infinity and beyond"
