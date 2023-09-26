@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# web stack debugging apache server
+
+echo "ServerName 127.0.0.1" >> /etc/apache2/conf
+service apache2 start
