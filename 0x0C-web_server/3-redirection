@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# redirection to 301 Moved Permanently
+
+apt-get update
+apt-get -y install nginx
+echo 'Hello World!' | tee /var/www/html/index.html
+sed -i "48i\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n" /etc/nginx/sites-available/default
+service nginx restart
