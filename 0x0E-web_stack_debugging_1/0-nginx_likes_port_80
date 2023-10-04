@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Script that fix the nginx listening port issue
-
-sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-enabled/default
+sed -i -e "s/8080/80/g" -e "s/ipv6only=on//" /etc/nginx/sites-available/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
