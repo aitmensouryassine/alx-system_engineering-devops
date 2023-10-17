@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # displays a username associated with the effective user ID
 
-sudo -u $1 whoami
+sudo -u "$1" whoami
