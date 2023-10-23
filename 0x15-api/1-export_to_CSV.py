@@ -17,6 +17,6 @@ if __name__ == "__main__":
     csv_output = [[t.get('userId'), user_name, t.get('completed'),
                    t.get('title')] for t in todos]
 
-    with open(f"{user_id}.csv", "w") as f:
-        write = csv.writer(f)
+    with open(f"{user_id}.csv", "w", newline="") as f:
+        write = csv.writer(f, quoting=csv.QUOTE_ALL)
         write.writerows(csv_output)
