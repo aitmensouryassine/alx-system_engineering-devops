@@ -1,7 +1,7 @@
 # Postmortem Report
 
 ## 500 Internal Server Error
-
+<img src="meme.jpg" />
 ### Summary
 On Novemeber 8th, 2023 at 16:00 the server went down, returning 500 Internal Server Error when accessing any endpoint.
 
