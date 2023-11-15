@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script to reload gunicorn gracefully
 
-pgrep gunicorn | xargs kill
+pgrep gunicorn | head -1 | xargs kill -SIGUSR2
