@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Script to reload gunicorn gracefully
 
-pid=pgrep gunicorn | head -1
-kill -HUP "$(pid)"
+systemctl status gunicorn | grep "Main PID" | awk '{print $3}' | xargs kill -HUP
